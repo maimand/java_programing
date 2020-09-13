@@ -1,0 +1,28 @@
+package BT2;
+
+import java.util.Scanner;
+
+public class B11 {
+	public static boolean isPerfect(long n) {
+		long sum = 0;
+		for(int i = 1; i < n/2; i++) {
+			if(n%i==0) {
+				sum += i;
+			}
+		}
+		return sum==n;
+	}
+	public static void compute(long n){
+		for(int i = 1; i <= n; i++) {
+			if(isPerfect(i)) {
+				System.out.println(i);
+			}
+		}
+	}
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Nhap n: ");
+		int n = scanner.nextInt();
+		compute(n);
+	}
+}

@@ -1,0 +1,25 @@
+package BT2;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class B12 {
+	public static void fibonacci(long n){
+//		ArrayList<Integer> list = new ArrayList<>();
+		long u1 = 1;
+		long u2 = 1;
+		long u = 0;
+		for(int i = 0; i < n; i++) {
+			u = u1 + u2;
+			u2 = u1;
+			u1 = u;
+			System.out.print("\t" + u);
+		}
+	}
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Nhap n: ");
+		long n = scanner.nextInt();
+		fibonacci(n);
+	}
+}

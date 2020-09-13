@@ -1,0 +1,18 @@
+package BT1;
+
+import java.util.Scanner;
+
+public class b2 {
+	public static double compute(double a, double b) {
+		return -a/b;
+	}
+	public static void main(String args[]) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Nhap a = ");
+		double a = scanner.nextDouble();
+		System.out.print("Nhap b = ");
+		double b = scanner.nextDouble();
+		
+		System.out.println(compute(a,b));
+	}
+}
